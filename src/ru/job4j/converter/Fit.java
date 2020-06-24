@@ -1,19 +1,19 @@
 package ru.job4j.converter;
 
 public class Fit {
-    public static double manWeight(short height) {
+    public static double manWeight(double height) {
         double rsl = (height - 100) * 1.15;
         return rsl;
     }
 
-    public static double womanWeight(short height) {
+    public static double womanWeight(double height) {
         double rsl = (height - 110) * 1.15;
         return rsl;
     }
 
     public static void main(String[] args) {
-        short height = 187;
-        short height1 = 170;
+        double height = 187;
+        double height1 = 170;
         double man = Fit.manWeight(height);
         double woman = Fit.womanWeight(height1);
         System.out.println("Man 187 is " + man);
