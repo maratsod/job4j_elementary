@@ -18,7 +18,7 @@ public class PointTest {
         double expected = 2.0;
         double out = Point.distance(x1, y1, x2, y2);
         Assert.assertEquals(expected, out, 0.1);
-        }
+    }
 
     @Test
     public void whenDistanceHasThenFourPoints1() {
@@ -31,4 +31,4 @@ public class PointTest {
         double out = Point.distance(x1, y1, x2, y2);
         Assert.assertEquals(expected, out, 0.1);
     }
-    }
+}
