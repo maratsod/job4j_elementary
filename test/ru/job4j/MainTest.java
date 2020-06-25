@@ -1,8 +1,6 @@
 package ru.job4j;
 
-import org.junit.Assert;
 import org.junit.Test;
-import ru.job4j.condition.Point;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
