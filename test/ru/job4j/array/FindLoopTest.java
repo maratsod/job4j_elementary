@@ -32,4 +32,13 @@ public class FindLoopTest {
         assertThat(result, is(expect));
     }
 
+    @Test
+    public void whenArrayHas3Then1() {
+        int[] input = {5, 2, 100, 4};
+        int value = 3;
+        int result = FindLoop.indexOf(input, value);
+        int expect = -1;
+        assertThat(result, is(expect));
+    }
+
 }
