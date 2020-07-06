@@ -9,15 +9,11 @@ public class Defragment {
     }
 
     public static String[] compress(String[] array) {
-        int nullIndex = 0;
-        int notNullIndex = 0;
-        for (int i = nullIndex; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
-                nullIndex = i;
-                for (int j = notNullIndex; j < array.length; j++) {
+                for (int j = i + 1; j < array.length; j++) {
                 if (array[j] != null) {
-                    notNullIndex = j;
-                    Defragment.swap(array, nullIndex, notNullIndex);
+                    Defragment.swap(array, i, j);
                     break;
                 } } }
             System.out.print(array[i] + " ");
