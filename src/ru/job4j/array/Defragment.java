@@ -15,12 +15,13 @@ public class Defragment {
                 if (array[j] != null) {
                     Defragment.swap(array, i, j);
                     break;
-                } } }
+                }
+                }
+            }
             System.out.print(array[i] + " ");
         }
         return array;
     }
-
 
     public static void main(String[] args) {
         String[] input = {"I", null, "wanna", null, "be", null, "compressed"};
