@@ -7,7 +7,6 @@ public class Defragment {
         array[dest] = temp;
         return array;
     }
-
     public static String[] compress(String[] array) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == null) {
@@ -22,7 +21,6 @@ public class Defragment {
         }
         return array;
     }
-
     public static void main(String[] args) {
         String[] input = {"I", null, "wanna", null, "be", null, "compressed"};
         String[] compressed = compress(input);

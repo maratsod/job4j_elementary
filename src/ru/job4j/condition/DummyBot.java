@@ -8,11 +8,8 @@ public class DummyBot {
         } else if ("Пока.".equals(question)) {
             rsl = "До скорой встречи.";
         }
-
         return rsl;
     }
-
-
     public static void main(String[] args) {
         String rsl = DummyBot.answer("Привет, Бот.");
         System.out.println(rsl);

@@ -7,7 +7,6 @@ public class SqArea {
         double s = l * h;
         return  s;
     }
-
     public static void main(String[] args) {
         double result1 = SqArea.square(4, 1);
         double result2 = SqArea.square(6, 2);
