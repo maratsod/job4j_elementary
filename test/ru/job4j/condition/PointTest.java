@@ -16,7 +16,9 @@ public class PointTest {
         int y2 = 0;
 
         double expected = 2.0;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point a = new Point(x1, y1);
+        Point b = new Point(x2, y2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.1);
     }
 
@@ -28,7 +30,9 @@ public class PointTest {
         int y2 = 3;
 
         double expected = 1.0;
-        double out = Point.distance(x1, y1, x2, y2);
+        Point a = new Point(x1, y1);
+        Point b = new Point(x2, y2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.1);
     }
 
@@ -42,7 +46,9 @@ public class PointTest {
         int z2 = 4;
 
         double expected = 2.0;
-        double out = Point.distance3d(x1, y1, z1, x2, y2, z2);
+        Point a = new Point(x1, y1, z1);
+        Point b = new Point(x2, y2, z2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.1);
     }
 
@@ -50,13 +56,15 @@ public class PointTest {
     public void whenDistanceHasThenSixPoints() {
         int x1 = 7;
         int y1 = 4;
-        int z1 = 4;
+        int z1 = 3;
         int x2 = 5;
-        int y2 = 2;
+        int y2 = 4;
         int z2 = 3;
 
-        double expected = 3.0;
-        double out = Point.distance3d(x1, y1, z1, x2, y2, z2);
+        double expected = 2.0;
+        Point a = new Point(x1, y1, z1);
+        Point b = new Point(x2, y2, z2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.1);
     }
 }
