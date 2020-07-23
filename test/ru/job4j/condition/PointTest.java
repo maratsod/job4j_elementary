@@ -1,10 +1,10 @@
 package ru.job4j.condition;
 
-        import org.junit.Assert;
-        import org.junit.Test;
-        import ru.job4j.converter.Converter;
+import org.junit.Assert;
+import org.junit.Test;
+import ru.job4j.converter.Converter;
 
-        import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
 public class PointTest {
 
@@ -29,6 +29,34 @@ public class PointTest {
 
         double expected = 1.0;
         double out = Point.distance(x1, y1, x2, y2);
+        Assert.assertEquals(expected, out, 0.1);
+    }
+
+    @Test
+    public void whenDistanceHasSixPoints() {
+        int x1 = 6;
+        int y1 = 3;
+        int z1 = 4;
+        int x2 = 4;
+        int y2 = 3;
+        int z2 = 4;
+
+        double expected = 2.0;
+        double out = Point.distance3d(x1, y1, z1, x2, y2, z2);
+        Assert.assertEquals(expected, out, 0.1);
+    }
+
+    @Test
+    public void whenDistanceHasThenSixPoints() {
+        int x1 = 7;
+        int y1 = 4;
+        int z1 = 4;
+        int x2 = 5;
+        int y2 = 2;
+        int z2 = 3;
+
+        double expected = 3.0;
+        double out = Point.distance3d(x1, y1, z1, x2, y2, z2);
         Assert.assertEquals(expected, out, 0.1);
     }
 }
